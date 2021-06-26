@@ -1,15 +1,27 @@
 - name: Install Docker
   hosts: all
   tasks:
-    - name: Install packages
-      package:
-         name: 
-           - yum-utils 
-           - device-mapper-persistent-data 
-           - lvm2
-         state: present
-         
-    - name: Add Docker-CE repo
+        
+    - name: Add Docker yum repo
       yum_repository:
-         name: docker-ce
-         
+        name: docker-ce
+        description: Docker CE Stable
+        baseurl: https://artifacts.oppd.oppd-ds.com/artifactory/bt-rpm/linux/centos/7/x86_64/stable
+        gpgcheck: yes
+        gpgkey: https://artifacts.oppd.oppd-ds.com/artifactory/bt-rpm/linux/centos/gpg
+
+   - name: Add Centos Extras yum repo
+     yum_repository:
+        name: centos-extras
+        description: Centos Extras
+        baseurl: https://artifacts.oppd.oppd-ds.com/artifactory/bt-rpm/centos/7/extras/x86_64
+        gpgcheck: no
+
+   - name: Install Docker
+     package:
+        name: 
+          - yum-utils 
+          - device-mapper-persistent-data
+          - lvm2
+          - docker-ce
+        state: present 
