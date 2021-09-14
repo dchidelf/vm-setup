@@ -5,7 +5,7 @@
         
     - name: debug
       debug:
-         msg: "{{ pkg_MULECORE.version }}"
+         msg: "{{ pkg_MULECORE.group }} {{ pkg_MULECORE.module }} {{ pkg_MULECORE.version }}"
         
     - name: Add Docker yum repo
       yum_repository:
