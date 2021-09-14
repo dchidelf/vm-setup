@@ -15,6 +15,11 @@ all:
         things:
             vars:
                group: stuff
+               pkg_MULECORE: 
+                  group: com.mulesoft
+                  module: mule-ee-distribution-standalone
+                  ext: tgz
+                  version: 4.3.0
             children:
                thing1:
                thing2:
