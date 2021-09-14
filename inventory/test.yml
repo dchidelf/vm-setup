@@ -5,13 +5,13 @@ all:
                foo: bar
                stuff: yuck
             hosts:
-               abc.thing.com
-               abc2.thing.com
+               abc.thing.com:
+               abc2.thing.com:
         thing2:
             vars:
                hello: goodbye
             hosts:
-               cdf.thing.com
+               cdf.thing.com:
         things:
             vars:
                group: stuff
