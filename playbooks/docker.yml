@@ -3,6 +3,10 @@
   become: yes
   tasks:
         
+    - name: debug
+      debug:
+         msg: "{{ pkg_MULECORE.version }}"
+        
     - name: Add Docker yum repo
       yum_repository:
         name: docker-ce
