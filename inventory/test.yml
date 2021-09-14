@@ -1,8 +1,15 @@
 all:
    children:
       thing1:
+         vars:
+            foo: bar
+            stuff: yuck
          hosts:
             abc.thing.com
+               foo: loo
+            abc2.thing.com
       thing2:
+         vars:
+            hello: goodbye
          hosts:
             cdf.thing.com
