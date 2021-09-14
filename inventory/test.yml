@@ -1,0 +1,8 @@
+all:
+   children:
+      thing1:
+         hosts:
+            abc.thing.com
+      thing2:
+         hosts:
+            cdf.thing.com
