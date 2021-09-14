@@ -7,12 +7,12 @@ all:
             hosts:
                abc.thing.com
                abc2.thing.com
-         thing2:
+        thing2:
             vars:
                hello: goodbye
             hosts:
                cdf.thing.com
-         things:
+        things:
             vars:
                group: stuff
             children:
