@@ -6,7 +6,6 @@ all:
             stuff: yuck
          hosts:
             abc.thing.com
-               foo: loo
             abc2.thing.com
       thing2:
          vars:
