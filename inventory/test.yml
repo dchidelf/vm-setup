@@ -1,14 +1,18 @@
 all:
    children:
-      thing1:
+      things:
          vars:
-            foo: bar
-            stuff: yuck
-         hosts:
-            abc.thing.com
-            abc2.thing.com
-      thing2:
-         vars:
-            hello: goodbye
-         hosts:
-            cdf.thing.com
+            group: stuff
+         children:
+         thing1:
+            vars:
+               foo: bar
+               stuff: yuck
+            hosts:
+               abc.thing.com
+               abc2.thing.com
+         thing2:
+            vars:
+               hello: goodbye
+            hosts:
+               cdf.thing.com
