@@ -1,10 +1,6 @@
 all:
    children:
-      things:
-         vars:
-            group: stuff
-         children:
-         thing1:
+        thing1:
             vars:
                foo: bar
                stuff: yuck
@@ -16,3 +12,9 @@ all:
                hello: goodbye
             hosts:
                cdf.thing.com
+         things:
+            vars:
+               group: stuff
+            children:
+               thing1:
+               thing2:
