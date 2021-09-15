@@ -4,4 +4,9 @@
         
     - name: debug
       debug:
+         msg: "{{ pkg_MULECORE.version }}"
+        
+        
+    - name: debug
+      debug:
          msg: "{{ pkg_MULECORE.group }} {{ pkg_MULECORE.module }} {{ pkg_MULECORE.version }}"
