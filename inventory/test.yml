@@ -1,6 +1,6 @@
 all:
    children:
-        thing1:
+        thing_dev:
             vars:
                foo: bar
                stuff: yuck
@@ -8,21 +8,24 @@ all:
                   version: 4.4.4
             hosts:
                devbox:
-        thing2:
+        thing_qul:
             vars:
                hello: goodbye
                pkg_MULECORE:
                   version: 5.0.0
             hosts:
                cdf.thing.com:
-        things:
+        thing:
             vars:
                group: stuff
+               pkgs:
+                  - MULECORE:
+                  - MULEPATCH:
                pkg_MULECORE: 
                   group: com.mulesoft
                   module: mule-ee-distribution-standalone
                   ext: tgz
                   version: 4.3.0
             children:
-               thing1:
-               thing2:
+               thing_dev:
+               thing_qul:
