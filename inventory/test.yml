@@ -7,8 +7,7 @@ all:
                pkg_MULECORE:
                   version: 4.4.4
             hosts:
-               abc.thing.com:
-               abc2.thing.com:
+               devbox:
         thing2:
             vars:
                hello: goodbye
